@@ -1,15 +1,14 @@
 import { Card } from "@/components/ui/card";
-
 const Footer = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({
+        behavior: 'smooth'
+      });
     }
   };
-
-  return (
-    <footer className="bg-slate-900/50 border-t border-slate-700/50 py-16">
+  return <footer className="bg-slate-900/50 border-t border-slate-700/50 py-16">
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-4 gap-12 mb-12">
           {/* Logo and Description */}
@@ -32,14 +31,7 @@ const Footer = () => {
               <li><button onClick={() => scrollToSection('faq')} className="text-muted-foreground hover:text-primary transition-colors cursor-pointer">FAQ</button></li>
               <li><button onClick={() => scrollToSection('garantia')} className="text-muted-foreground hover:text-primary transition-colors cursor-pointer">Garantia</button></li>
               <li>
-                <a 
-                  href="https://wa.me/5515999798973?text=Eu%20quero%20adquirir%20o%20Pack%20Z" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-green-400 hover:text-green-300 transition-colors flex items-center gap-2"
-                >
-                  💬 WhatsApp
-                </a>
+                <a href="https://wa.me/5515999798973?text=Eu%20quero%20adquirir%20o%20Pack%20Z" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300 transition-colors flex items-center gap-2"> WhatsApp</a>
               </li>
             </ul>
           </div>
@@ -112,8 +104,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
