@@ -9,6 +9,7 @@ import GuaranteeSection from "@/components/GuaranteeSection";
 import FAQSection from "@/components/FAQSection";
 import CountdownSection from "@/components/CountdownSection";
 import FinalCTASection from "@/components/FinalCTASection";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
@@ -26,6 +27,7 @@ const Index = () => {
         <CountdownSection />
         <FinalCTASection />
       </main>
+      <Footer />
     </div>
   );
 };
