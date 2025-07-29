@@ -88,7 +88,7 @@ const FinalCTASection = () => {
                 variant="outline" 
                 size="lg" 
                 className="w-full max-w-lg mx-auto border-green-500/50 text-green-400 hover:bg-green-500/10"
-                onClick={() => window.open('https://wa.me/5515999798973?text=Eu%20quero%20adquirir%20o%20Pack%20Z', '_blank')}
+                onClick={() => window.open('https://wa.me/5515997979893?text=Eu%20quero%20adquirir%20o%20Pack%20Z', '_blank')}
               >
                 💬 Falar no WhatsApp
               </Button>

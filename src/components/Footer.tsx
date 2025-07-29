@@ -31,7 +31,7 @@ const Footer = () => {
               <li><button onClick={() => scrollToSection('faq')} className="text-muted-foreground hover:text-primary transition-colors cursor-pointer">FAQ</button></li>
               <li><button onClick={() => scrollToSection('garantia')} className="text-muted-foreground hover:text-primary transition-colors cursor-pointer">Garantia</button></li>
               <li>
-                <a href="https://wa.me/5515999798973?text=Eu%20quero%20adquirir%20o%20Pack%20Z" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300 transition-colors flex items-center gap-2"> WhatsApp</a>
+                <a href="https://wa.me/5515997979893?text=Eu%20quero%20adquirir%20o%20Pack%20Z" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300 transition-colors flex items-center gap-2"> WhatsApp</a>
               </li>
             </ul>
           </div>
