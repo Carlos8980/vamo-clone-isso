@@ -18,8 +18,8 @@ All colors MUST be HSL.
     --popover: 210 20% 10%;
     --popover-foreground: 180 100% 95%;
 
-    /* Cyan/Turquoise primary color */
-    --primary: 180 100% 50%;
+    /* Cyan/Turquoise primary color - more vibrant */
+    --primary: 180 100% 55%;
     --primary-foreground: 210 24% 8%;
 
     /* Dark secondary */
@@ -29,7 +29,7 @@ All colors MUST be HSL.
     --muted: 210 20% 20%;
     --muted-foreground: 180 20% 70%;
 
-    --accent: 180 100% 60%;
+    --accent: 180 100% 65%;
     --accent-foreground: 210 24% 8%;
 
     --destructive: 0 84.2% 60.2%;
@@ -41,13 +41,13 @@ All colors MUST be HSL.
 
     --radius: 0.5rem;
 
-    /* Custom cinematic colors */
-    --cyan-glow: 180 100% 70%;
+    /* Custom cinematic colors - more vibrant */
+    --cyan-glow: 180 100% 75%;
     --dark-blue: 210 30% 6%;
-    --gradient-primary: linear-gradient(135deg, hsl(180 100% 50%), hsl(200 100% 60%));
+    --gradient-primary: linear-gradient(135deg, hsl(180 100% 55%), hsl(200 100% 65%));
     --gradient-background: linear-gradient(180deg, hsl(210 24% 8%), hsl(210 30% 4%));
-    --shadow-cyan: 0 0 30px hsl(180 100% 50% / 0.3);
-    --shadow-glow: 0 10px 40px hsl(180 100% 50% / 0.2);
+    --shadow-cyan: 0 0 30px hsl(180 100% 55% / 0.4);
+    --shadow-glow: 0 10px 40px hsl(180 100% 55% / 0.3);
 
     --sidebar-background: 0 0% 98%;
 
@@ -74,13 +74,13 @@ All colors MUST be HSL.
     --card-foreground: 180 100% 95%;
     --popover: 210 20% 10%;
     --popover-foreground: 180 100% 95%;
-    --primary: 180 100% 50%;
+    --primary: 180 100% 55%;
     --primary-foreground: 210 24% 8%;
     --secondary: 210 20% 15%;
     --secondary-foreground: 180 100% 90%;
     --muted: 210 20% 20%;
     --muted-foreground: 180 20% 70%;
-    --accent: 180 100% 60%;
+    --accent: 180 100% 65%;
     --accent-foreground: 210 24% 8%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
@@ -117,6 +117,21 @@ All colors MUST be HSL.
   }
 
   .glow-text {
-    text-shadow: 0 0 20px hsl(180 100% 50% / 0.5);
+    text-shadow: 0 0 20px hsl(180 100% 55% / 0.6);
+  }
+
+  .pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite alternate;
+  }
+
+  @keyframes pulse-glow {
+    from {
+      box-shadow: 0 0 20px hsl(180 100% 55% / 0.4);
+      transform: scale(1);
+    }
+    to {
+      box-shadow: 0 0 30px hsl(180 100% 55% / 0.8);
+      transform: scale(1.02);
+    }
   }
 }

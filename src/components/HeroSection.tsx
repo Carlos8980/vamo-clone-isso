@@ -41,7 +41,7 @@ const HeroSection = () => {
       </Card>
 
       {/* CTA Button */}
-      <Button variant="hero" size="lg" className="mb-8">
+      <Button variant="hero" size="lg" className="mb-8 pulse-glow">
         🎬 Quero acessar agora o Pack Z
       </Button>
 

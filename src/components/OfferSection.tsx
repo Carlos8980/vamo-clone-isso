@@ -82,7 +82,7 @@ const OfferSection = () => {
           <span className="text-primary font-semibold">Satisfação garantida</span>
         </div>
 
-        <Button variant="hero" size="lg" className="w-full">
+        <Button variant="hero" size="lg" className="w-full pulse-glow">
           🚀 Garantir meu Pack Z agora
         </Button>
       </Card>

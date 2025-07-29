@@ -8,7 +8,7 @@ const Header = () => {
         <span className="text-sm text-muted-foreground">EFFECTS</span>
       </div>
       
-      <Button variant="cinematic" size="sm">
+      <Button variant="cinematic" size="sm" className="pulse-glow">
         🎬 Garantir Pack Z
       </Button>
     </header>

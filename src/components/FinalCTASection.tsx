@@ -63,7 +63,7 @@ const FinalCTASection = () => {
         <p className="text-muted-foreground mb-2">Investimento único • Acesso vitalício</p>
         <p className="text-sm text-primary mb-8">Menos de R$0,20 por overlay</p>
         
-        <Button variant="hero" size="lg" className="w-full">
+        <Button variant="hero" size="lg" className="w-full pulse-glow">
           Sim, quero turbinar meus vídeos com o Pack Z
         </Button>
         
