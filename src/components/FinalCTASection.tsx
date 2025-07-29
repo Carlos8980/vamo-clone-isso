@@ -1,7 +1,10 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { useState } from "react";
+import PaymentModal from "./PaymentModal";
 
 const FinalCTASection = () => {
+  const [paymentModalOpen, setPaymentModalOpen] = useState(false);
   const withoutPack = [
     "Horas perdidas criando efeitos",
     "Resultado amador", 
@@ -69,7 +72,12 @@ const FinalCTASection = () => {
           <p className="text-muted-foreground mb-2">Investimento único • Acesso vitalício</p>
           <p className="text-sm text-primary mb-8">Menos de R$0,20 por overlay</p>
           
-          <Button variant="hero" size="lg" className="w-full max-w-lg mx-auto pulse-glow mb-6">
+          <Button 
+            variant="hero" 
+            size="lg" 
+            className="w-full max-w-lg mx-auto pulse-glow mb-6"
+            onClick={() => setPaymentModalOpen(true)}
+          >
             Sim, quero turbinar meus vídeos com o Pack Z →
           </Button>
           
@@ -78,6 +86,11 @@ const FinalCTASection = () => {
           </p>
         </div>
       </Card>
+      
+      <PaymentModal 
+        isOpen={paymentModalOpen} 
+        onClose={() => setPaymentModalOpen(false)} 
+      />
     </section>
   );
 };

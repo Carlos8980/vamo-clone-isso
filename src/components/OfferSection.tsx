@@ -1,8 +1,11 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { useState } from "react";
+import PaymentModal from "./PaymentModal";
 
 const OfferSection = () => {
+  const [paymentModalOpen, setPaymentModalOpen] = useState(false);
   const overlayTypes = [
     { name: "Film Burns", count: 138 },
     { name: "Glitchs", count: 56 },
@@ -84,12 +87,22 @@ const OfferSection = () => {
               <span className="text-muted-foreground font-semibold">Satisfação garantida</span>
             </div>
 
-            <Button variant="hero" size="lg" className="w-full pulse-glow">
+            <Button 
+              variant="hero" 
+              size="lg" 
+              className="w-full pulse-glow"
+              onClick={() => setPaymentModalOpen(true)}
+            >
               🚀 Garantir meu Pack Z agora
             </Button>
           </Card>
         </div>
       </div>
+      
+      <PaymentModal 
+        isOpen={paymentModalOpen} 
+        onClose={() => setPaymentModalOpen(false)} 
+      />
     </section>
   );
 };
