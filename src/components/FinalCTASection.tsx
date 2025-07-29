@@ -72,14 +72,28 @@ const FinalCTASection = () => {
           <p className="text-muted-foreground mb-2">Investimento único • Acesso vitalício</p>
           <p className="text-sm text-primary mb-8">Menos de R$0,20 por overlay</p>
           
-          <Button 
-            variant="hero" 
-            size="lg" 
-            className="w-full max-w-lg mx-auto pulse-glow mb-6"
-            onClick={() => setPaymentModalOpen(true)}
-          >
-            Sim, quero turbinar meus vídeos com o Pack Z →
-          </Button>
+          <div className="space-y-4">
+            <Button 
+              variant="hero" 
+              size="lg" 
+              className="w-full max-w-lg mx-auto pulse-glow"
+              onClick={() => setPaymentModalOpen(true)}
+            >
+              Sim, quero turbinar meus vídeos com o Pack Z →
+            </Button>
+            
+            <div className="text-center">
+              <p className="text-sm text-muted-foreground mb-3">ou</p>
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className="w-full max-w-lg mx-auto border-green-500/50 text-green-400 hover:bg-green-500/10"
+                onClick={() => window.open('https://wa.me/5515999798973?text=Eu%20quero%20adquirir%20o%20Pack%20Z', '_blank')}
+              >
+                💬 Falar no WhatsApp
+              </Button>
+            </div>
+          </div>
           
           <p className="text-xs text-muted-foreground">
             🔒 Pagamento 100% seguro • Garantia de 7 dias • Acesso imediato

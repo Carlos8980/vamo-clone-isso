@@ -87,14 +87,25 @@ const OfferSection = () => {
               <span className="text-muted-foreground font-semibold">Satisfação garantida</span>
             </div>
 
-            <Button 
-              variant="hero" 
-              size="lg" 
-              className="w-full pulse-glow"
-              onClick={() => setPaymentModalOpen(true)}
-            >
-              🚀 Garantir meu Pack Z agora
-            </Button>
+            <div className="space-y-3">
+              <Button 
+                variant="hero" 
+                size="lg" 
+                className="w-full pulse-glow"
+                onClick={() => setPaymentModalOpen(true)}
+              >
+                🚀 Garantir meu Pack Z agora
+              </Button>
+              
+              <Button 
+                variant="outline" 
+                size="sm" 
+                className="w-full border-green-500/50 text-green-400 hover:bg-green-500/10"
+                onClick={() => window.open('https://wa.me/5515999798973?text=Eu%20quero%20adquirir%20o%20Pack%20Z', '_blank')}
+              >
+                💬 WhatsApp
+              </Button>
+            </div>
           </Card>
         </div>
       </div>
