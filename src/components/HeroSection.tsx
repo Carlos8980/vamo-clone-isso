@@ -3,7 +3,7 @@ import { Card } from "@/components/ui/card";
 
 const HeroSection = () => {
   return (
-    <section className="container mx-auto px-6 py-12 text-center">
+    <section id="como-funciona" className="container mx-auto px-6 py-12 text-center">
       {/* Badge */}
       <div className="inline-flex items-center gap-2 bg-secondary/50 border border-primary/30 rounded-full px-5 py-2 mb-12">
         <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>

@@ -2,7 +2,7 @@ import { Card } from "@/components/ui/card";
 
 const GuaranteeSection = () => {
   return (
-    <section className="container mx-auto px-6 py-16">
+    <section id="garantia" className="container mx-auto px-6 py-16">
       <div className="text-center mb-16">
         <h2 className="text-4xl font-bold mb-4">Garantia & Segurança</h2>
       </div>

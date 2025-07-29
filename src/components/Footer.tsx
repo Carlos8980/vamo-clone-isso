@@ -1,6 +1,13 @@
 import { Card } from "@/components/ui/card";
 
 const Footer = () => {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <footer className="bg-slate-900/50 border-t border-slate-700/50 py-16">
       <div className="container mx-auto px-6">
@@ -20,10 +27,10 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold text-foreground mb-6">Links Rápidos</h3>
             <ul className="space-y-3 text-sm">
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Como Funciona</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Depoimentos</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">FAQ</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Garantia</a></li>
+              <li><button onClick={() => scrollToSection('como-funciona')} className="text-muted-foreground hover:text-primary transition-colors cursor-pointer">Como Funciona</button></li>
+              <li><button onClick={() => scrollToSection('depoimentos')} className="text-muted-foreground hover:text-primary transition-colors cursor-pointer">Depoimentos</button></li>
+              <li><button onClick={() => scrollToSection('faq')} className="text-muted-foreground hover:text-primary transition-colors cursor-pointer">FAQ</button></li>
+              <li><button onClick={() => scrollToSection('garantia')} className="text-muted-foreground hover:text-primary transition-colors cursor-pointer">Garantia</button></li>
             </ul>
           </div>
 
