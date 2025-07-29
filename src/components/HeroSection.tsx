@@ -3,23 +3,23 @@ import { Card } from "@/components/ui/card";
 
 const HeroSection = () => {
   return (
-    <section className="container mx-auto px-6 py-16 text-center">
+    <section className="container mx-auto px-6 py-12 text-center">
       {/* Badge */}
-      <div className="inline-flex items-center gap-2 bg-secondary/50 border border-primary/30 rounded-full px-4 py-2 mb-8">
+      <div className="inline-flex items-center gap-2 bg-secondary/50 border border-primary/30 rounded-full px-5 py-2 mb-12">
         <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
         <span className="text-sm text-primary">Criado por profissional com +7 anos no audiovisual</span>
       </div>
 
       {/* Main Title */}
-      <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+      <h1 className="text-6xl md:text-8xl font-bold mb-8 leading-tight">
         Mais de <span className="gradient-text glow-text">500 Overlays</span><br />
         <span className="text-foreground">Cinematográficos</span>
       </h1>
 
       {/* Subtitle */}
-      <p className="text-xl text-muted-foreground mb-12 max-w-4xl mx-auto">
+      <p className="text-xl md:text-2xl text-muted-foreground mb-16 max-w-5xl mx-auto leading-relaxed">
         Ideal para editores, criadores e videomakers que querem elevar o visual com rapidez e qualidade profissional –{" "}
-        <span className="text-primary font-semibold">sem precisar criar do zero.</span>
+        <span className="text-primary font-semibold glow-text">sem precisar criar do zero.</span>
       </p>
 
       {/* Video Preview Card */}
