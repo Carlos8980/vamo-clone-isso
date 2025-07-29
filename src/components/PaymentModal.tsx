@@ -185,8 +185,16 @@ const PaymentModal = ({ isOpen, onClose }: PaymentModalProps) => {
 
             <Card className="p-4 bg-slate-800/50">
               <div className="text-center mb-4">
-                <div className="w-48 h-48 mx-auto bg-white rounded-lg flex items-center justify-center">
-                  <div className="text-black text-xs">QR CODE PIX</div>
+                <div className="w-48 h-48 mx-auto bg-white rounded-lg flex items-center justify-center overflow-hidden">
+                  <img 
+                    src={`https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=${encodeURIComponent(pixData.copy_paste)}`}
+                    alt="QR Code PIX"
+                    className="w-full h-full object-contain"
+                    onError={(e) => {
+                      e.currentTarget.style.display = 'none';
+                      e.currentTarget.parentElement!.innerHTML = '<div class="text-black text-xs p-4">Erro ao gerar QR Code</div>';
+                    }}
+                  />
                 </div>
               </div>
               
