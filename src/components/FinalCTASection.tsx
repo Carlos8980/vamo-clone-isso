@@ -18,58 +18,65 @@ const FinalCTASection = () => {
 
   return (
     <section className="container mx-auto px-6 py-16">
-      <div className="text-center mb-16">
-        <h2 className="text-4xl font-bold mb-4">Agora é com você.</h2>
-        <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-          Vai continuar editando como amador, ou quer dar um salto profissional nos seus vídeos com o Pack Z?
-        </p>
-      </div>
-
-      <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-16">
-        {/* Without Pack Z */}
-        <Card className="p-8 bg-card/50 border-red-500/30">
-          <h3 className="text-2xl font-bold mb-6 text-red-400">Sem o Pack Z</h3>
-          <div className="space-y-4">
-            {withoutPack.map((item, index) => (
-              <div key={index} className="flex items-start gap-3">
-                <div className="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center mt-1 flex-shrink-0">
-                  <span className="text-white text-sm">✗</span>
-                </div>
-                <span className="text-muted-foreground">{item}</span>
-              </div>
-            ))}
+      <Card className="max-w-4xl mx-auto p-8 bg-slate-800/50 border-primary/30 rounded-2xl">
+        <div className="text-center mb-12">
+          <div className="flex items-center justify-center mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mr-4">
+              Agora é com você.
+            </h2>
+            <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center">
+              <span className="text-primary text-2xl">⚡</span>
+            </div>
           </div>
-        </Card>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            Vai continuar editando como amador, ou quer dar um{" "}
+            <span className="text-primary font-semibold glow-text">salto profissional</span>{" "}
+            nos seus vídeos com o Pack Z?
+          </p>
+        </div>
 
-        {/* With Pack Z */}
-        <Card className="p-8 bg-gradient-to-br from-card/80 to-primary/10 border-primary/30">
-          <h3 className="text-2xl font-bold mb-6 text-primary">Com o Pack Z</h3>
-          <div className="space-y-4">
-            {withPack.map((item, index) => (
-              <div key={index} className="flex items-start gap-3">
-                <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center mt-1 flex-shrink-0">
-                  <span className="text-primary-foreground text-sm">✓</span>
+        <div className="grid md:grid-cols-2 gap-8 mb-12">
+          {/* Without Pack Z */}
+          <Card className="p-6 bg-red-900/20 border-red-500/30 rounded-2xl">
+            <h3 className="text-xl font-bold mb-6 text-red-400">Sem o Pack Z</h3>
+            <div className="space-y-3">
+              {withoutPack.map((item, index) => (
+                <div key={index} className="flex items-center gap-3">
+                  <span className="text-red-400 text-lg">•</span>
+                  <span className="text-muted-foreground">{item}</span>
                 </div>
-                <span>{item}</span>
-              </div>
-            ))}
-          </div>
-        </Card>
-      </div>
+              ))}
+            </div>
+          </Card>
 
-      {/* Final Price & CTA */}
-      <Card className="max-w-lg mx-auto p-8 bg-gradient-to-br from-card/80 to-primary/10 border-primary/30 text-center">
-        <div className="text-6xl font-bold gradient-text glow-text mb-2">R$97</div>
-        <p className="text-muted-foreground mb-2">Investimento único • Acesso vitalício</p>
-        <p className="text-sm text-primary mb-8">Menos de R$0,20 por overlay</p>
-        
-        <Button variant="hero" size="lg" className="w-full pulse-glow">
-          Sim, quero turbinar meus vídeos com o Pack Z
-        </Button>
-        
-        <p className="text-xs text-muted-foreground mt-4">
-          🔒 Pagamento 100% seguro • Garantia de 7 dias • Acesso imediato
-        </p>
+          {/* With Pack Z */}
+          <Card className="p-6 bg-teal-900/20 border-primary/30 rounded-2xl">
+            <h3 className="text-xl font-bold mb-6 text-primary">Com o Pack Z</h3>
+            <div className="space-y-3">
+              {withPack.map((item, index) => (
+                <div key={index} className="flex items-center gap-3">
+                  <span className="text-primary text-lg">•</span>
+                  <span className="text-foreground">{item}</span>
+                </div>
+              ))}
+            </div>
+          </Card>
+        </div>
+
+        {/* Final Price & CTA */}
+        <div className="text-center">
+          <div className="text-6xl font-bold gradient-text glow-text mb-2">R$97</div>
+          <p className="text-muted-foreground mb-2">Investimento único • Acesso vitalício</p>
+          <p className="text-sm text-primary mb-8">Menos de R$0,20 por overlay</p>
+          
+          <Button variant="hero" size="lg" className="w-full max-w-lg mx-auto pulse-glow mb-6">
+            Sim, quero turbinar meus vídeos com o Pack Z →
+          </Button>
+          
+          <p className="text-xs text-muted-foreground">
+            🔒 Pagamento 100% seguro • Garantia de 7 dias • Acesso imediato
+          </p>
+        </div>
       </Card>
     </section>
   );
