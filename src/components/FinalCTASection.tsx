@@ -20,7 +20,7 @@ const FinalCTASection = () => {
   ];
 
   return (
-    <section className="container mx-auto px-6 py-16">
+    <section data-section="final-cta" className="container mx-auto px-6 py-16">
       <Card className="max-w-4xl mx-auto p-8 bg-slate-800/50 border-primary/30 rounded-2xl">
         <div className="text-center mb-12">
           <div className="flex items-center justify-center mb-6">
